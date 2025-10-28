@@ -30,7 +30,7 @@ set(PICO_BOARD pico CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(test C CXX ASM)
+project(KinKon C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
@@ -40,26 +40,26 @@ add_subdirectory(libs/pico-ssd1306)
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(test main.cpp)
+add_executable(KinKon main.cpp)
 
-pico_set_program_name(test "test")
-pico_set_program_version(test "0.1")
+pico_set_program_name(KinKon "KinKon")
+pico_set_program_version(KinKon "1.8")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(test 1)
-pico_enable_stdio_usb(test 0)
+pico_enable_stdio_uart(KinKon 1)
+pico_enable_stdio_usb(KinKon 0)
 
 # Add the standard library to the build
-target_link_libraries(test
+target_link_libraries(KinKon
         pico_stdlib
         hardware_i2c
         pico_ssd1306
 )
 
 # Add the standard include files to the build
-target_include_directories(test PRIVATE
+target_include_directories(KinKon PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
 )
 
-pico_add_extra_outputs(test)
+pico_add_extra_outputs(KinKon)
 
