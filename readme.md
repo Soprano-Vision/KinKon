@@ -9,6 +9,7 @@ Cars at that time sounded a warning chime when exceeding 105 km/h (Light motive 
 It runs on common RP2040 Zero compatible modules. (Including Raspberry Pi Pico, of course).
 
 -Ja-
+
 KinKon (not KingKong)は、1980年代の日本の自動車の安全装置を再現したプログラムです。
 当時の車は、105km/h(85km/h)を超過すると、警告チャイムが鳴りました。
 
